@@ -8,17 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SillySongViewController: UIViewController {
 
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var lyricsView: UITextView!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        nameField.delegate = self
-    }
 
     @IBAction func reset(_ sender: Any) {
         
@@ -39,7 +32,7 @@ class ViewController: UIViewController {
 
 // MARK: - UITextFieldDelegate
 
-extension ViewController: UITextFieldDelegate {
+extension SillySongViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
